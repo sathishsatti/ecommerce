@@ -6,11 +6,11 @@
 	
 	<head>
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> 
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<title>ONLY SHOESS</title>
+		<title>ONLY SHOES</title>
 	</head>
 	
 	<jsp:include page="header.jsp"></jsp:include>
@@ -19,7 +19,7 @@
 
 	<body>	
 	
-		<div="container">
+
 			<h2><strong>NEW SHOES</strong></h2>
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
   		
@@ -36,19 +36,23 @@
   			<div class="carousel-inner">
     				<div class="item active">
       					<img class="img-rounded" class="img-responsive center-block"
-      					src="resources/adidas_YEEZY_350_V2_WB_Lateral_Left.jpg" style="width:100%">
+      					src="ab.jpg" style="width:100%">
     				</div>
 
     				<div class="item">
 	    				<img class="img-rounded" class="img-responsive center-block"
-    	  				src="resources/lunarglide-9-womens-running-shoe.jpg" style="width:100%">
+    	  				src="C.jpg" style="width:100%">
     				</div>
 
     				<div class="item">
     					<img class="img-rounded" class="img-responsive center-block"
-     					src="resources/OS_Sneaker_1366x776_01.jpg" style="width:100%">
+     					src="v.jpg" style="width:100%">
     				</div>
     				
+    				<div class="item">
+    					<img class="img-rounded" class="img-responsive center-block"
+     					src="ss.jpg" style="width:100%">
+    				</div>
  		 </div>
 
   <!-- Left and right controls -->

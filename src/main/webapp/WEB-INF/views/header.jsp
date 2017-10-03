@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -15,13 +16,15 @@
 
 	<body>
 	  
-	  	<nav id ="navbar-red" class="navbar-inverse"role=navigation">
+	  	<nav id ="navbar-red" class="navbar-inverse"role="navigation">
 			
-			<div class="container">
+			<div class="container-fluid">
 				<ul="nav navbar-nav">
-					<button type="button"class="navbar-togglecollapsed datatoggle="collapse "data target="bs-example-nav">
-						<spam class="icon_bar"></spam>
-						<spam class="iconbar"></spam>
+					<button type="button"class="navbar-toggle collapsed datatoggle="collapse"data target="bs-example-nav">
+						<span class="sr-only">toggle navigation</span>
+						<span class="icon_bar"></span>
+						<span class="icon_bar"></span>
+						<span class="icon_bar"></span>
 					</button>
 				</ul>
 			</div>
@@ -31,15 +34,28 @@
 				<ul class="nav navbar-nav">
 			
 					<li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>HOME</a></li>
-					<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>LOGIN</a></li>
+					<li><a href="login"><i class="fa fa-sign-in" aria-hidden="true"></i>LOGIN</a></li>
 					<li><a href="#">CUSTOMER CARE</a></li>
+					<li><a href="registration">Register</a></li>
 					<li><a href="#">PRODUCT LIST</a></li>
+					<li class="dropdown"><a href="#" class="drop-down-toggle" data-toggle="dropdown">category<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#"	>link1</a></li>
+						<li><a href="#"	>link2</a></li>
+						<li><a href="#"	>link3</a></li>
+						<li class ="divides"></li>
+						<li><a href="#">seperate link</a></li>
+						
+						<li class ="divides"></li>
+						<li><a href="#">another link</a></li>
+						
+					</ul>
 			
 	  			</ul>
 	  		</div>
 	  	</nav>
 	  	
-	</body>
 
+	</body>
 </html>
 
