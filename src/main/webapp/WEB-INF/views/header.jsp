@@ -11,7 +11,7 @@
   			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   			<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   			
-  			<title><strong>project</strong></title>
+  			<title Class="STRONG">project</title>
 		</head>
 
 	<body>
@@ -38,24 +38,14 @@
 					<li><a href="#">CUSTOMER CARE</a></li>
 					<li><a href="registration">Register</a></li>
 					<li><a href="#">PRODUCT LIST</a></li>
-					<li class="dropdown"><a href="#" class="drop-down-toggle" data-toggle="dropdown">category<b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#"	>link1</a></li>
-						<li><a href="#"	>link2</a></li>
-						<li><a href="#"	>link3</a></li>
-						<li class ="divides"></li>
-						<li><a href="#">seperate link</a></li>
-						
-						<li class ="divides"></li>
-						<li><a href="#">another link</a></li>
 						
 					</ul>
 			
-	  			</ul>
+	  			
 	  		</div>
 	  	</nav>
 	  	
-
+<footer><p>this is footer</p></footer>
 	</body>
 </html>
 
