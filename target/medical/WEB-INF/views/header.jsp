@@ -11,7 +11,7 @@
   			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   			<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   			
-  			<title><strong>project</strong></title>
+  			<title Class="STRONG">project</title>
 		</head>
 
 	<body>
@@ -38,42 +38,14 @@
 					<li><a href="#">CUSTOMER CARE</a></li>
 					<li><a href="registration">Register</a></li>
 					<li><a href="#">PRODUCT LIST</a></li>
-					<li class="dropdown"><a href="#" class="drop-down-toggle" data-toggle="dropdown">category<b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#"	>link1</a></li>
-						<li><a href="#"	>link2</a></li>
-						<li><a href="#"	>link3</a></li>
-						<li class ="divides"></li>
-						<li><a href="#">seperate link</a></li>
-						
-						<li class ="divides"></li>
-						<li><a href="#">another link</a></li>
 						
 					</ul>
 			
-	  			</ul>
+	  			
 	  		</div>
 	  	</nav>
 	  	
-<!-- footer -->	  	
-	<footer class="site-footer" background-color="#222" color="#fff"  >
-		  	<div class ="container">
-			  	<div class="row">
-	  			</div>
-	  			<div class="bottom-footer">
-	  				<div class="col-md-5">@copyright NIIT 2017.</div>
-	  				<div class="col-md-7">
-	  					<ul class="footer-nav">
-	  						<li><a href="Index.html">home</a></li>
-	  						<li><a href="#">blog</a></li>
-     					    <li><a href="contact.html">contact</a></li>
-	  						<li><a href="blog.html">blog</a></li>
-	 						<li><a href="link.html">link</a></li>
-	  					</ul>
-	  				</div>
-	  			</div>
-	  		</div>
-	  	</footer>
+
 	</body>
 </html>
 
