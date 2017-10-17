@@ -14,7 +14,7 @@
 	<jsp:include page="header.jsp"></jsp:include>
 <body>
 	<div ="container">
-	<h2><i>new trendzz</i></h2>
+	<h2><i>Brand new</i></h2>
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 	
   <!-- Indicators -->

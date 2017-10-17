@@ -5,34 +5,34 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>supplier</title>
 </head>
-<body>
+	<body>
 			<!-- <form action="AddSupplier" method="post">-->
 
-		<form:form action="AddSupplier" modelAttribute="Supplier">
-		<table align="center" cellspacing="2">
-		<tr>
-			<td colspan="2">Supplier Module</td>
-		</tr>
+			<form:form action="AddSupplier" modelAttribute="Supplier">
+			<table align="center" cellspacing="2">
+			<tr>
+				<td colspan="2">Supplier Module</td>
+			</tr>
+			
+			<tr>
+					<td>Supplier ID</td>
+					<!--<td><input type="text" name="supId"/></td>-->
+					<td><form:input path="supId"/></td>
+			</tr>
+	
+			<tr>
+				<td>Supplier Name</td>
+				<!-- <td><input type="text" name="supName"/></td> -->
+				<td><form:input path="supName"/></td>
+			</tr>
 		
-		<tr>
-				<td>Supplier ID</td>
-				<!--<td><input type="text" name="supId"/></td>-->
-				<td><form:input path="supId"/></td>
-		</tr>
-	
-		<tr>
-			<td>Supplier Name</td>
-			<!-- <td><input type="text" name="supName"/></td> -->
-			<td><form:input path="supName"/></td>
-		</tr>
-	
-		<tr>
-			<td>Supplier Address</td>
-			<!-- <td><input type="text" name="supAddress"/></td> -->
-			<td><form:input path="supAddress"/></td>
-		</tr>
+			<tr>
+				<td>Supplier Address</td>
+				<!-- <td><input type="text" name="supAddress"/></td> -->
+				<td><form:input path="supAddress"/></td>
+			</tr>
 	
 		<tr>
 			<td colspan="2">
@@ -56,6 +56,7 @@
 			<td>${supplier.supName}</td>
 			<td>${supplier.supAddress}</td>
 			<td>
+			
 				<a href="<c:url value="deleteSupplier/${supplier.supId}"/>">DELETE</a>/
 				<a href="<c:url value="updateSupplier/${supplier.supId}"/>">UPDATE</a>
 			</td>
