@@ -11,7 +11,7 @@
   			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   			<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   			
-  			<title Class="STRONG">project</title>
+  			<title>project</title>
 		</head>
 
 	<body>
@@ -35,9 +35,9 @@
 			
 					<li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>HOME</a></li>
 					<li><a href="login"><i class="fa fa-sign-in" aria-hidden="true"></i>LOGIN</a></li>
-					<li><a href="#">CUSTOMER CARE</a></li>
+					<li><a href="Category">Category</a></li>
 					<li><a href="registration">Register</a></li>
-					<li><a href="#">PRODUCT LIST</a></li>
+					<li><a href="Product">PRODUCT</a></li>
 						
 					</ul>
 			

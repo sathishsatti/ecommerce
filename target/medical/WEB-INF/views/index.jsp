@@ -45,7 +45,7 @@
     
     	 <div class="item">
     			<img class="img-rounded" class="img-responsive center-block"
-    	  		src="v.jpg" style="width:100%">
+    	  		src="C:\Users\SATHISH\Downloads\v.jpg" style="width:100%">
     	</div>
   	</div>
 

@@ -30,9 +30,9 @@ public String goToRegisterPage(@ModelAttribute("user") User user,Model model)
 	model.addAttribute("user",new User());
 	
 	return "register";
+
+
 }
-
-
 
 @RequestMapping("/saveUser")
 public String createUser(@ModelAttribute("user") User user)

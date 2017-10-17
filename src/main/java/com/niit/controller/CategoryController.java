@@ -8,8 +8,10 @@ package com.niit.controller;
 	import org.springframework.web.bind.annotation.PathVariable;
 	import org.springframework.web.bind.annotation.RequestMapping;
 	import org.springframework.web.bind.annotation.RequestMethod;
-	import com.niit.dao.CategoryDAO;
-	import com.niit.model.Category;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.niit.dao.CategoryDAO;
+import com.niit.model.Category;
 	 
 	@Controller
 	public class CategoryController 
@@ -18,9 +20,10 @@ package com.niit.controller;
 	    CategoryDAO categoryDAO;
 	     
 	     
-	    /*@RequestMapping(value="AddCategory",method=RequestMethod.POST)
+	    @RequestMapping(value="AddCategory",method=RequestMethod.POST)
 	    public String addCategory(@RequestParam("catId") int catId,@RequestParam("catName") String catName,@RequestParam("catDesc") String catDesc,Model m)
 	    {
+	    	
 	        Category category=new Category();
 	        category.setCatId(catId);
 	        category.setCatName(catName);
@@ -32,7 +35,7 @@ package com.niit.controller;
 	        m.addAttribute("categoryList",listCategory);
 	         
 	        return "Category";
-	    }*/
+	    }
 	     
 	    @RequestMapping(value="AddCategory",method=RequestMethod.POST)
 	    public String addCategory(@ModelAttribute("category")Category category,Model m)
