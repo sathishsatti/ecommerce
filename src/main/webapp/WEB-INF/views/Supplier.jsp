@@ -10,28 +10,28 @@
 	<body>
 			<!-- <form action="AddSupplier" method="post">-->
 
-			<form:form action="AddSupplier" modelAttribute="Supplier">
+			<form:form action="AddSupplier" modelAttribute="supplier">
 			<table align="center" cellspacing="2">
 			<tr>
 				<td colspan="2">Supplier Module</td>
 			</tr>
 			
-			<tr>
+			<%-- <tr>
 					<td>Supplier ID</td>
-					<!--<td><input type="text" name="supId"/></td>-->
-					<td><form:input path="supId"/></td>
+					<!--<td><input type="text" name="supplierId"/></td>-->
+					<td><form:input path="supplierId"/></td>
 			</tr>
-	
+	 --%>
 			<tr>
 				<td>Supplier Name</td>
-				<!-- <td><input type="text" name="supName"/></td> -->
-				<td><form:input path="supName"/></td>
+				<!-- <td><input type="text" name="supplierName"/></td> -->
+				<td><form:input path="supplierName"/></td>
 			</tr>
 		
 			<tr>
 				<td>Supplier Address</td>
-				<!-- <td><input type="text" name="supAddress"/></td> -->
-				<td><form:input path="supAddress"/></td>
+				<!-- <td><input type="text" name="supplierAddress"/></td> -->
+				<td><form:input path="supplierAddress"/></td>
 			</tr>
 	
 		<tr>
@@ -52,13 +52,13 @@
 	
 	<c:forEach items="${supplierList}" var="supplier">
 		<tr bgcolor="cyan">
-			<td>${supplier.supId}</td>
-			<td>${supplier.supName}</td>
-			<td>${supplier.supAddress}</td>
+			<td>${supplier.supplierId}</td>
+			<td>${supplier.supplierName}</td>
+			<td>${supplier.supplierAddress}</td>
 			<td>
 			
-				<a href="<c:url value="deleteSupplier/${supplier.supId}"/>">DELETE</a>/
-				<a href="<c:url value="updateSupplier/${supplier.supId}"/>">UPDATE</a>
+				<a href="<c:url value="deleteSupplier/${supplier.supplierId}"/>">DELETE</a>/
+				<a href="<c:url value="updateSupplier/${supplier.supplierId}"/>">UPDATE</a>
 			</td>
 		</tr>
 	</c:forEach>

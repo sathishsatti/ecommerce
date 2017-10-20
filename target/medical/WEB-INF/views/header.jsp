@@ -33,19 +33,16 @@
 			
 				<ul class="nav navbar-nav">
 			
-					<li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>HOME</a></li>
+					<li><a href="Home"><i class="fa fa-home" aria-hidden="true"></i>HOME</a></li>
 					<li><a href="login"><i class="fa fa-sign-in" aria-hidden="true"></i>LOGIN</a></li>
-					<li><a href="Category">Category</a></li>
+					<li><a href="category">Category</a></li>
+					<li><a href="supplier">Supplier</a></li>
 					<li><a href="registration">Register</a></li>
-					<li><a href="Product">PRODUCT</a></li>
+					<li><a href="product">PRODUCT</a></li>
 						
-					</ul>
-			
-	  			
+				</ul>
 	  		</div>
 	  	</nav>
-	  	
-
 	</body>
 </html>
 

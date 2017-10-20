@@ -61,7 +61,7 @@ public class ProductController {
 		
 		productDao.addProduct(product);
 		
-		String path="C:\\JAVA SOFT\\medical\\src\\main\\webapp\\resources\\images\\";
+		String path="C:\\JAVA SOFT\\java programs\\medical\\src\\main\\webapp\\resources\\images\\";
 		
 		String totalFileWithPath=path+String.valueOf(product.getProductId())+".jpg";
 		

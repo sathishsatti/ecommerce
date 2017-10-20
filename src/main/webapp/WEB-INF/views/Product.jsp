@@ -49,8 +49,8 @@
 	</tr>
 	<tr>
 		<td>Product Image</td>
-		<td><form:input type="file" path="pimage"/></td>
-	</tr>
+		<td><input type="file" name="pimage"/></td>
+	</tr> 
 	<tr>
 		<td colspan="2">
 			<center><input type="submit" value="Insert"/></center>
