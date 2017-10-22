@@ -9,9 +9,14 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	
+	
 </head>
 
 	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="Footer.jsp"></jsp:include>
+		
+	
 <body>
 	<div ="container">
 	<h2><i>Brand new</i></h2>
@@ -61,4 +66,5 @@
   		</a>
 	</div>
 </body>
+
 </html>

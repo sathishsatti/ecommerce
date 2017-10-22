@@ -3,8 +3,11 @@ package com.niit.controller;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,9 +21,10 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.niit.dao.CategoryDAO;
 import com.niit.dao.ProductDao;
+import com.niit.dao.SupplierDao;
 import com.niit.model.Category;
 import com.niit.model.Product;
-
+import com.niit.model.Supplier;
 
 @Controller
 public class ProductController {
@@ -31,6 +35,9 @@ public class ProductController {
 	@Autowired
 	CategoryDAO categoryDAO;
 	
+	@Autowired
+	SupplierDao supplierDao;
+	
 	@RequestMapping(value="product",method=RequestMethod.GET)
 	public String showProduct(Model m)
 	{
@@ -38,6 +45,7 @@ public class ProductController {
 		m.addAttribute(product);
 		
 		m.addAttribute("categoryList",this.getCategories());
+		m.addAttribute("supplierList", this.getSuppliers());
 		
 		return "Product";
 	}
@@ -52,47 +60,33 @@ public class ProductController {
 			categoriesList.put(category.getCatId(),category.getCatName());
 		}
 		
-		return categoriesList;
+		return categoriesList;		
 	}
+
 	
-	@RequestMapping(value="InsertProduct",method=RequestMethod.POST)
-	public String insertProduct(@ModelAttribute("product")Product product,@RequestParam("pimage")MultipartFile fileDetail,Model m)
+		
+	
+	public LinkedHashMap<Integer,String> getSuppliers()
 	{
+		List<Supplier> listSuppliers=supplierDao.retrieveSupplier();
+		LinkedHashMap<Integer,String> suppliersList=new LinkedHashMap<Integer,String>();
 		
-		productDao.addProduct(product);
-		
-		String path="C:\\JAVA SOFT\\java programs\\medical\\src\\main\\webapp\\resources\\images\\";
-		
-		String totalFileWithPath=path+String.valueOf(product.getProductId())+".jpg";
-		
-		File productImage=new File(totalFileWithPath);
-		
-		if(!fileDetail.isEmpty())
+		for(Supplier supplier:listSuppliers)
 		{
-			try
-			{
-				byte fileBuffer[]=fileDetail.getBytes();
-				FileOutputStream fos=new FileOutputStream(productImage);
-				BufferedOutputStream bs=new BufferedOutputStream(fos);
-				bs.write(fileBuffer);
-				bs.close();
-			}
-			catch(Exception e)
-			{
-				m.addAttribute("error",e.getMessage());
-			}
-		}
-		else
-		{
-			m.addAttribute("error","Problem in File Uploading");
+			suppliersList.put(supplier.getSupplierId(),supplier.getSupplierName());
 		}
 		
-		Product product1=new Product();
-		m.addAttribute(product1);
-		
-		return "Product";
+		return suppliersList;
 	}
 	
+	@RequestMapping(value="InsertProduct",method = RequestMethod.POST)
+
+	public String addItem(@ModelAttribute("product") Product p,@RequestParam("file") MultipartFile file,HttpServletRequest request) throws IOException{
+		p.setImage(file.getBytes());
+		this.productDao.addProduct(p);
+		return "Product";
+		
+	}
 	
 	@RequestMapping(value="userHome")
 	public String showProducts(Model m)

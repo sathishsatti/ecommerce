@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>product</title>
 </head>
 <body>
 		<form:form action="InsertProduct" modelAttribute="product" enctype="multipart/form-data">
@@ -14,10 +14,6 @@
 	<tr>
 		<td colspan="2">Product Detail</td>
 	</tr>	
-	<tr>
-		<td>Product ID</td>
-		<td><form:input path="productId"/></td>
-	</tr>
 	<tr>
 		<td>Product Name</td>
 		<td><form:input path="productName"/></td>
@@ -43,13 +39,19 @@
 			</form:select>
 		</td>
 	</tr>
+
 	<tr>
 		<td>Supplier</td>
-		<td><form:input path="supplierId"/></td>
+		<td>
+			<form:select path="supplierId">
+				<form:option value="0" label="---Select---"/>
+				<form:options items="${supplierList}"/>
+			</form:select>
+		</td>
 	</tr>
 	<tr>
 		<td>Product Image</td>
-		<td><input type="file" name="pimage"/></td>
+		<td><input type="file" name="file"/></td>
 	</tr> 
 	<tr>
 		<td colspan="2">
