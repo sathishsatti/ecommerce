@@ -45,7 +45,6 @@ import com.niit.model.Category;
 	    public String updateCategory(@PathVariable("catId") int catId,Model m)
 	    {
 	        Category category=categoryDAO.getCategory(catId);
-	        m.addAttribute(category);
 	         
 	        List<Category> listCategory=categoryDAO.retrieveCategory();
 	        m.addAttribute("categoryList",listCategory);

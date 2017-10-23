@@ -15,6 +15,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<footer>
 <nav id ="navbar-red" class="navbar-inverse"role="navigation">
 <table class="footer">
     <tr>
@@ -22,5 +23,6 @@
         <td align="right"><img src="<spring:url value="/resources/images/springsource-logo.png" htmlEscape="true"/ >
     </tr>
 </table>
+</nav></footer>
 </body>
 </html>

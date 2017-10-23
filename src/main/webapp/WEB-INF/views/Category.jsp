@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<title>Insert title here</title>
+		<title>Category</title>
 	</head>
 <body>
 
@@ -17,11 +17,6 @@
 			<td colspan="2">Category Module</td>
 		</tr>
 		
-		<tr>
-				<td>Category ID</td>
-				<!--<td><input type="text" name="catId"/></td>-->
-				<td><form:input path="catId"/></td>
-		</tr>
 	
 		<tr>
 			<td>Category Name</td>
@@ -57,7 +52,7 @@
 			<td>${category.catName}</td>
 			<td>${category.catDesc}</td>
 			<td>
-				<a href="<c:url value="deleteCategory/${category.catId}"/>">DELETE</a>/
+				<a href="<c:url value="deleteCategory/${category.catId}"/>">DELETE</a>
 				<a href="<c:url value="updateCategory/${category.catId}"/>">UPDATE</a>
 			</td>
 		</tr>
