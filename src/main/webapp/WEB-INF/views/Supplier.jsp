@@ -22,6 +22,13 @@
 					<td><form:input path="supplierId"/></td>
 			</tr>
 	 --%>
+	 
+			 <tr>
+				<td></td>
+					<!-- <td><input type="text" name="catName"/></td> -->
+				<td><form:input path="supplierd" type="hidden"/></td>
+			</tr>
+		
 			<tr>
 				<td>Supplier Name</td>
 				<!-- <td><input type="text" name="supplierName"/></td> -->
