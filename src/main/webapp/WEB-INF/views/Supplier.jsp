@@ -26,7 +26,7 @@
 			 <tr>
 				<td></td>
 					<!-- <td><input type="text" name="catName"/></td> -->
-				<td><form:input path="supplierd" type="hidden"/></td>
+				<td><form:input path="supplierId" type="hidden"/></td>
 			</tr>
 		
 			<tr>
@@ -43,7 +43,8 @@
 	
 		<tr>
 			<td colspan="2">
-				<center><input type="submit" value="Insert"/></center>
+				<center><input type="submit" value="Insert"/>
+				<input type="submit" value="Update"/></center>
 			</td>
 		</tr>
 	</table>

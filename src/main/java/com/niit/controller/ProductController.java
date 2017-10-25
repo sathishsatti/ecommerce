@@ -1,8 +1,5 @@
 package com.niit.controller;
 
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -18,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.niit.dao.CategoryDAO;
 import com.niit.dao.ProductDao;
@@ -38,6 +36,8 @@ public class ProductController {
 	@Autowired
 	SupplierDao supplierDao;
 	
+
+	
 	@RequestMapping(value="product",method=RequestMethod.GET)
 	public String showProduct(Model m)
 	{
@@ -46,9 +46,15 @@ public class ProductController {
 		
 		m.addAttribute("categoryList",this.getCategories());
 		m.addAttribute("supplierList", this.getSuppliers());
+		//m.addAttribute("productList",this.getProducts());
+		List<Product> listProducts=productDao.retrieveProduct();
+		m.addAttribute("productList",listProducts);
 		
 		return "Product";
 	}
+	
+	
+	
 	
 	public LinkedHashMap<Integer,String> getCategories()
 	{
@@ -66,6 +72,8 @@ public class ProductController {
 	
 		
 	
+	
+	
 	public LinkedHashMap<Integer,String> getSuppliers()
 	{
 		List<Supplier> listSuppliers=supplierDao.retrieveSupplier();
@@ -79,15 +87,63 @@ public class ProductController {
 		return suppliersList;
 	}
 	
-	@RequestMapping(value="InsertProduct",method = RequestMethod.POST)
 
-	public String addItem(@ModelAttribute("product") Product p,@RequestParam("file") MultipartFile file,HttpServletRequest request) throws IOException{
+	/*public LinkedHashMap<Integer,String> getProducts()
+	{
+		List<Product> listProducts=productDao.retrieveProduct();
+		LinkedHashMap<Integer,String> productsList=new LinkedHashMap<Integer,String>();
+		
+		for(Product product:listProducts)
+		{
+			productsList.put(product.getProductId(),product.getProductName());
+		}
+		
+		return productsList;
+	}
+	*/
+	
+	
+	
+	
+	@RequestMapping(value="InsertProduct",method = RequestMethod.POST)
+public String addItem(@ModelAttribute("product") Product p,@RequestParam("file") MultipartFile file,HttpServletRequest request) throws IOException
+	{
 		p.setImage(file.getBytes());
 		this.productDao.addProduct(p);
-		return "Product";
+		return "redirect:/product";
 		
 	}
 	
+	
+	
+	
+	
+	
+	
+	@RequestMapping(value="updateProduct/{productId}",method=RequestMethod.GET)
+	    public String updateProduct(@PathVariable("productId") int productId,Model m,RedirectAttributes attributes)
+	    {
+	       // m.addAttribute("category", categoryDAO.getCategory(catId));
+	        
+	        attributes.addFlashAttribute("product", this.productDao.getProduct(productId));
+	    	return "redirect:/product";
+	    }
+	  
+	  
+	
+	
+	@RequestMapping(value="deleteProduct/{productId}",method=RequestMethod.GET)
+	    public String deleteProduct(@PathVariable("productId")int productId,Model m,RedirectAttributes attributes)
+	    {
+	    	m.addAttribute("product", productDao.deleteProduct(productId));
+	    	
+	    	return "redirect:/product";
+	    }
+
+	
+	
+	
+
 	@RequestMapping(value="userHome")
 	public String showProducts(Model m)
 	{
@@ -97,6 +153,9 @@ public class ProductController {
 		return "UserHome";
 	}
 	
+	
+	
+	
 	@RequestMapping(value="productDesc/{productId}")
 	public String showProductDesc(@PathVariable("productId")int productId,Model m)
 	{
@@ -104,7 +163,10 @@ public class ProductController {
 		m.addAttribute("product",product);
 		return "ProductDesc";
 	}
-
+	
+	
+	
+	
 }
 
 

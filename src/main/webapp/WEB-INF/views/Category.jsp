@@ -41,7 +41,10 @@
 			<tr>
 				<td colspan="2">
 				
-					<center><input type="submit" value="Insert"/></center>
+					<center><input type="submit" value="Insert"/>
+					<input type="submit" value="update"/>
+					
+					</center>
 				</td>
 			</tr>
 		</table>
