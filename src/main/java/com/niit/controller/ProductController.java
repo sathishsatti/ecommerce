@@ -39,14 +39,14 @@ public class ProductController {
 
 	
 	@RequestMapping(value="product",method=RequestMethod.GET)
-	public String showProduct(Model m)
+	public String showProduct(@ModelAttribute("product")Product product ,Model m)
 	{
-		Product product=new Product();
+	//	Product product=new Product();
 		m.addAttribute(product);
 		
 		m.addAttribute("categoryList",this.getCategories());
 		m.addAttribute("supplierList", this.getSuppliers());
-		//m.addAttribute("productList",this.getProducts());
+		
 		List<Product> listProducts=productDao.retrieveProduct();
 		m.addAttribute("productList",listProducts);
 		
@@ -117,13 +117,10 @@ public String addItem(@ModelAttribute("product") Product p,@RequestParam("file")
 	
 	
 	
-	
-	
-	
 	@RequestMapping(value="updateProduct/{productId}",method=RequestMethod.GET)
 	    public String updateProduct(@PathVariable("productId") int productId,Model m,RedirectAttributes attributes)
 	    {
-	       // m.addAttribute("category", categoryDAO.getCategory(catId));
+	      
 	        
 	        attributes.addFlashAttribute("product", this.productDao.getProduct(productId));
 	    	return "redirect:/product";

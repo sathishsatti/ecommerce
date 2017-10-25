@@ -18,7 +18,7 @@
 	
 				 <tr>
 					<td></td>
-					<!-- <td><input type="text" name="catName"/></td> -->
+					
 					<td><form:input path="productId" type="hidden"/></td>
 				</tr>
 		
