@@ -20,7 +20,7 @@ private UserDAO userDAO;
 @RequestMapping("/")
 public String index()
 {
-	return "index";
+	return "Welcome";
 }
 
 @RequestMapping("/registration")
@@ -41,7 +41,7 @@ public String createUser(@ModelAttribute("user") User user)
 	user.setRole("ROLE_USER");
 	user.setEnabled(true);
 	userDAO.saveUser(user);
-	return "index";
+	return "Welcome";
 }
 
 

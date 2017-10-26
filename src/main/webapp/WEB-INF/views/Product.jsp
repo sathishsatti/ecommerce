@@ -94,6 +94,7 @@
 					<td>Category</td>
 					<td>Supplier</td>
 					<td>Product Image</td>
+					<td>Action</td>
 				</tr>
 	
 	
