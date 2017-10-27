@@ -87,20 +87,6 @@ public class ProductController {
 		return suppliersList;
 	}
 	
-
-	/*public LinkedHashMap<Integer,String> getProducts()
-	{
-		List<Product> listProducts=productDao.retrieveProduct();
-		LinkedHashMap<Integer,String> productsList=new LinkedHashMap<Integer,String>();
-		
-		for(Product product:listProducts)
-		{
-			productsList.put(product.getProductId(),product.getProductName());
-		}
-		
-		return productsList;
-	}
-	*/
 	
 	
 	

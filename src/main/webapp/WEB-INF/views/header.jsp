@@ -1,7 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
+     	<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+   		<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
+   		<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+   		
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
 <html>
 
 		<head>
@@ -31,14 +37,17 @@
 		
 			<div class="collapse navbar-collapse"id=bs-example-nav>
 			
-				<ul class="nav navbar-nav">
+				<ul class="nav navbar-nav navbar-right">
 			
 					<li><a href="Home"><i class="fa fa-home" aria-hidden="true"></i>HOME</a></li>
-					<li><a href="login"><i class="fa fa-sign-in" aria-hidden="true"></i>LOGIN</a></li>
 					<li><a href="category">Category</a></li>
 					<li><a href="supplier">Supplier</a></li>
-					<li><a href="registration">Register</a></li>
 					<li><a href="product">PRODUCT</a></li>
+						
+						 <sec:authorize access="isAuthenticated()">
+                 <li><a href="<c:url value="j_spring_security_logout"/>">Logout</a></li>
+              
+                  </sec:authorize>
 						
 				</ul>
 	  		</div>

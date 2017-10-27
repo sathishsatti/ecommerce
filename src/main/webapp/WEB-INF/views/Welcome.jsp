@@ -1,7 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+	<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
 
 		<head>
@@ -12,6 +17,7 @@
   			<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   			
   			<title>project</title>
+		
 		</head>
 
 	<body>
@@ -31,15 +37,78 @@
 		
 			<div class="collapse navbar-collapse"id=bs-example-nav>
 			
-				<ul class="nav navbar-nav">
+			<ul class="nav navbar-nav navbar-right">
 			
-					<li><a href="Home"><i class="fa fa-home" aria-hidden="true"></i>HOME</a></li>
-					<li><a href="login"><i class="fa fa-sign-in" aria-hidden="true"></i>LOGIN</a></li>
-					<li><a href="registration">Register</a></li>
-						
+			
+				 <sec:authorize access="!isAuthenticated()">
+                    <li role="presentation"><a href="login">Login </a></li>
+                    <li role="presentation"><a href="registration">Register </a></li>
+                     </sec:authorize>
+                    <sec:authorize access="isAuthenticated()">
+                 <li><a href="<c:url value="j_spring_security_logout"/>">Logout</a></li>
+                 <li role="presentation"><a href="cart">cart</a></li>
+                  </sec:authorize>
+	
 				</ul>
 	  		</div>
 	  	</nav>
+	 <!--  	======================== -->
+	  	
+	  	
+	  	
+	<c:forEach items="${pList}" var="product">
+   
+    <div class="container">
+        <div class="row product">
+            <div class="col-md-5 col-md-offset-0">
+            <img src="/medical/myImage/imageDisplay?id=${product.productId}" alt="" width="300" height="200" /></div>
+            <div class="col-md-7">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Specifications </th>
+                                <th>Details </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> Name</td>
+                                <td>${product.productName}</td>
+                            </tr>
+                            <tr>
+                                <td>Price </td>
+                                <td>${product.price} </td>
+                            </tr>
+                            <tr>
+                                <td>Description</td>
+                                <td>${product.productDesc} </td>
+                            </tr>
+                            <tr>
+                                <td>colourS </td>
+                                <td>Orange,Black,White </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <form:form action="addToCart/${product.productId}" method="POST">
+                <button class="btn btn-default" type="submit">Add to cart</button>
+                </form:form>
+            </div>
+        </div>
+        
+        <div class="media">
+            <div class="media-body"></div>
+        </div>
+        <div class="media">
+            <div class="media-body"></div>
+        </div>
+    </div>
+    </c:forEach>  
+	  
+	  
+	   <!--  	======================== -->
+		
 	</body>
 </html>
 
