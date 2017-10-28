@@ -16,6 +16,7 @@ import com.niit.dao.ProductDao;
 import com.niit.model.Product;
 
 @Controller
+
 public class ImageController {
 
 
