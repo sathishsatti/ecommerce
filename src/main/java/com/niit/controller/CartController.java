@@ -61,6 +61,23 @@ public class CartController
 	    	
 	    }
 	   
+	  @RequestMapping("cart")
+		public String viewCart(Model model, HttpSession session) {
+	    	
+			//int userId = (Integer) session.getAttribute("userid");
+			model.addAttribute("CartList", cartDAO.listCart());
+			 if(cartDAO.cartsize((Integer) session.getAttribute("userid"))!=0){
+				
+				model.addAttribute("CartPrice", cartDAO.CartPrice((Integer) session.getAttribute("userid")));
+			} else {
+				model.addAttribute("EmptyCart", "true");
+			}
+			model.addAttribute("IfcartClicked", "true");
+		//	model.addAttribute("HideOthers", "true");
+			return "Cart";
+		}
+
+
 	
 
 }
