@@ -19,6 +19,24 @@
   			<title>project</title>
 		
 		</head>
+		<style>
+body {
+
+	 background: url("C:\Users\SATHISH\Downloads\Blur-3.png");
+    background-color:  #E6E6FA;
+}
+
+h1 {
+    background-color: #00ff00;
+}
+
+p {
+    background-color: rgb(255,0,255);
+}
+</style>
+</head>
+<body>
+		
 
 	<body>
 	  
@@ -41,12 +59,15 @@
 			
 			
 				 <sec:authorize access="!isAuthenticated()">
+				        <h2 class="form-signin-heading">Please sign in</h2>
                     <li role="presentation"><a href="login">Login </a></li>
                     <li role="presentation"><a href="registration">Register </a></li>
                      </sec:authorize>
                     <sec:authorize access="isAuthenticated()">
-                 <li><a href="<c:url value="j_spring_security_logout"/>">Logout</a></li>
-                 <li role="presentation"><a href="cart">cart</a></li>
+                
+                 <i class="fa fa-sign-out" aria-hidden="true"><a href="<c:url value="j_spring_security_logout"/>">Logout</a></i>
+                 
+                 <i  role="presentation" class="fa fa-shopping-cart" aria-hidden="true"><a href="cart">Cart</a></i>
                   </sec:authorize>
 	
 				</ul>
@@ -92,7 +113,7 @@
                     </table>
                 </div>
                 <form:form action="addToCart/${product.productId}" method="POST">
-                <button class="btn btn-default" type="submit">Add to cart</button>
+                <button  class="btn btn-warning" type="submit">Add to cart</button>
                 </form:form>
             </div>
         </div>
@@ -109,6 +130,19 @@
 	  
 	   <!--  	======================== -->
 		
+
+
+ 
+
+
+</body>
+
+
+
 	</body>
+	<body>
+	
+	<jsp:include page="Footer.jsp" />
+</body>
 </html>
 

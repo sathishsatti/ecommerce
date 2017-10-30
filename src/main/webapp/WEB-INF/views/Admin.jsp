@@ -14,7 +14,7 @@
 </head>
 
 	<jsp:include page="header.jsp"></jsp:include>
-	<jsp:include page="Footer.jsp"></jsp:include>
+	
 		
 	
 <body>
@@ -66,5 +66,7 @@
   		</a>
 	</div>
 </body>
-
+<body>
+<jsp:include page="Footer.jsp"></jsp:include>
+</body>
 </html>
