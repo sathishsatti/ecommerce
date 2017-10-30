@@ -30,6 +30,8 @@
  
 <style type="text/css">
 	.bs-example{
+
+	   background-color:#FFE4C4  ;
     	margin: 20px;
     }
 </style>
@@ -76,10 +78,11 @@
                         <td class="col-sm-1 col-md-1 text-center"><strong>${cart.price}</strong></td>
                         <td></td>
                         <td class="col-sm-1 col-md-1 text-center"><strong>${cart.subTotal}</strong></td>
-                        <td class="col-sm-1 col-md-1">
-                        
                        
-                        <a> <span class="glyphicon glyphicon-remove"></span> <button>Remove</button>
+                        
+                          <td class="col-sm-1 col-md-1">
+                        <a href="removeCart/${cart.cartId }" type="button" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-remove"></span> <button>Remove</button>
                         </a>
                         
                         </td>
