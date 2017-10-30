@@ -53,6 +53,7 @@ public class CartController
 				item.setProductName(p.getProductName());
 				item.setUserId(userId);
 				item.setProductQuantity(q);
+				
 				item.setSubTotal(q * p.getPrice());
 				item.setPrice(p.getPrice());
 				cartDAO.saveProductToCart(item);
