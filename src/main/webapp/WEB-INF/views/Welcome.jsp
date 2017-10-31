@@ -17,28 +17,15 @@
   			<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   			
   			<title>project</title>
-		
-		</head>
-		<style>
-body {
-
-	 background: url("C:\Users\SATHISH\Downloads\Blur-3.png");
-    background-color:  #E6E6FA;
-}
-
-h1 {
-    background-color: #00ff00;
-}
-
-p {
-    background-color: rgb(255,0,255);
-}
+		<style type="text/css">
+	.bs-example{
+    	margin: 20px;
+    }
 </style>
-</head>
-<body>
-		
+		</head>
+				
 
-	<body>
+	<body   background="${pageContext.request.contextPath}/resources/images (3).jpg"   style="width:100%" "height="20%">
 	  
 	  	<nav id ="navbar-red" class="navbar-inverse"role="navigation">
 			
@@ -59,21 +46,63 @@ p {
 			
 			
 				 <sec:authorize access="!isAuthenticated()">
-				        <h2 class="form-signin-heading">Please sign in</h2>
+				        
                     <li role="presentation"><a href="login">Login </a></li>
                     <li role="presentation"><a href="registration">Register </a></li>
                      </sec:authorize>
                     <sec:authorize access="isAuthenticated()">
                 
-                 <i class="fa fa-sign-out" aria-hidden="true"><a href="<c:url value="j_spring_security_logout"/>">Logout</a></i>
-                 
-                 <i  role="presentation" class="fa fa-shopping-cart" aria-hidden="true"><a href="cart">Cart</a></i>
+                  <li role="presentation"><a href="<c:url value="j_spring_security_logout"/>">Logout</a></i>
+                 <li  role="presentation" ><a href="cart">Cart</a></i>
                   </sec:authorize>
 	
 				</ul>
 	  		</div>
 	  	</nav>
-	 <!--  	======================== -->
+	  	
+	  	
+	 
+
+
+<div class="container">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="3" class="active"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img class="img-rounded" class="img-responsive center-block"
+      src="C:\Users\SATHISH\Downloads\123.png" style="width:100%" "height="50%">
+    </div>
+    <div class="item">
+    <img class="img-rounded" class="img-responsive center-block"
+      src="C:\Users\SATHISH\Downloads\10788252_l.png" style="width:100%" "height="50%">
+    </div>
+
+    <div class="item">
+    <img class="img-rounded" class="img-responsive center-block"
+      src="C:\Users\SATHISH\Downloads\Online-Grocery-Shopping-In-Karachi_1.jpg" style="width:100%" "height="20%">
+    </div>
+ 
+  </div>
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!-- ---------------------- -->
+	  	
+	
 	  	
 	  	
 	  	
@@ -105,11 +134,7 @@ p {
                                 <td>Description</td>
                                 <td>${product.productDesc} </td>
                             </tr>
-                            <tr>
-                                <td>colourS </td>
-                                <td>Orange,Black,White </td>
-                            </tr>
-                        </tbody>
+                            </tbody>
                     </table>
                 </div>
                 <form:form action="addToCart/${product.productId}" method="POST">

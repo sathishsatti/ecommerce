@@ -73,5 +73,9 @@
 		</c:forEach>
 
 		</table>
+		 <div 
+   <c:import url="/WEB-INF/views/Footer.jsp" />>
+</div>
+ 
 	</body>
 </html>
