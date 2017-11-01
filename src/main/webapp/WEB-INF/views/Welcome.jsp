@@ -25,7 +25,7 @@
 		</head>
 				
 
-	<body   background="${pageContext.request.contextPath}/resources/images (3).jpg"   style="width:100%" "height="20%">
+	<body  style = "background : url(http://budgetvideo.com/images/gallery/savage_canvas_blueskies.jpg); background-size:100% 100%;">
 	  
 	  	<nav id ="navbar-red" class="navbar-inverse"role="navigation">
 			

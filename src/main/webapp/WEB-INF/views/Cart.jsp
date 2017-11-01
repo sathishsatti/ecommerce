@@ -23,7 +23,7 @@
 <%-- <jsp:include page="showProduct.jsp" /> --%> 
 
 </head>
-<body>
+<body style = "background:url(http://www.hdwallpapery.com/static/images/HD-Wallpaper-Artistic-Background-e1383947243926_gyWyYfN.jpg);  background-size:100% 100%;">
 <div class="bs-example">
     <nav id="myNavbar" class="navbar navbar-inverse" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -40,7 +40,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">HOME</a></li>
+                    <li><a href="http://localhost:8080/medical/">HOME</a></li>
                     <li><a href="#">PROFILE</a></li>
                     
                 </ul>

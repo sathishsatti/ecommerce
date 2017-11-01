@@ -7,7 +7,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>product</title>
 </head>
-<body>
+<jsp:include page="header.jsp" />
+
+<body  style = "background : url(http://cdn.coda-craven.org/wp-content/uploads/2016/10/beautiful-rail-tracks-coda-craven.jpg); background-size:100%;">
+	  
 		
 		<form:form action="InsertProduct" modelAttribute="product" enctype="multipart/form-data">
 		<table align="center">

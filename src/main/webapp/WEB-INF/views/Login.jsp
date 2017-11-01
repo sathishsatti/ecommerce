@@ -18,7 +18,7 @@
 </head>
   
 </head>
-<body>
+<body style="background:url(http://s1.picswalls.com/wallpapers/2015/09/20/background-hd-2015_111526235_269.jpg);  background-size:100% 100%;">
 <div class="bs-example">
     <nav id="myNavbar" class="navbar navbar-inverse" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -35,7 +35,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="Welcome">HOME</a></li>
+                    <li><a href="http://localhost:8080/medical/">HOME</a></li>
                     <li><a href="#"></a></li>
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle"> <b class="caret"></b></a>

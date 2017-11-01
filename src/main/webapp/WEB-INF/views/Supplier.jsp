@@ -6,8 +6,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>supplier</title>
+
+
 </head>
-	<body>
+<jsp:include page="header.jsp" />
+
+<body  style = "background : url(https://wallpaperscraft.com/image/background_wall_brick_side_76611_1920x1080.jpg); background-size:100%;">
+	  
+	
 			<!-- <form action="AddSupplier" method="post">-->
 
 			<form:form action="AddSupplier" modelAttribute="supplier">
@@ -30,13 +36,13 @@
 			</tr>
 		
 			<tr>
-				<td>Supplier Name</td>
+				<td style="color:white">Supplier Name</td>
 				<!-- <td><input type="text" name="supplierName"/></td> -->
 				<td><form:input path="supplierName"/></td>
 			</tr>
 		
 			<tr>
-				<td>Supplier Address</td>
+				<td style="color:white">Supplier Address</td>
 				<!-- <td><input type="text" name="supplierAddress"/></td> -->
 				<td><form:input path="supplierAddress"/></td>
 			</tr>

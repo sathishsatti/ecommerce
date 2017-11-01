@@ -2,13 +2,17 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<jsp:include page="header.jsp" />
 <html>
 		<head>
 			<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 			<title>Category</title>
+	
+	
+
 		</head>
-	<body>
+	
+<body style="background:url(https://wallpaperscraft.com/image/sunglasses_sky_background_39601_1920x1080.jpg);  background-size:100% 100%;">
 	
 			<!-- <form action="AddCategory" method="post">-->
 	
@@ -21,7 +25,7 @@
 		     
 		     <tr>
 				<td></td>
-					<!-- <td><input type="text" name="catName"/></td> -->
+					
 				<td><form:input path="catId" type="hidden"/></td>
 			</tr>
 		
@@ -72,10 +76,33 @@
 			</tr>
 		</c:forEach>
 
-		</table>
-		 <div 
-   <c:import url="/WEB-INF/views/Footer.jsp" />>
-</div>
+		</table><br>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>		
+		
+		
+		
+		
  
 	</body>
 </html>

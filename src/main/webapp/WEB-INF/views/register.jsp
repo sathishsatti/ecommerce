@@ -21,7 +21,9 @@
 
 
 </head>
-<body>
+
+	<body  style = "background : url(http://awallpapersimages.com/wp-content/uploads/2016/07/Elephant-Full-HD-Wallpaper-hd-background-hd-screensavers-hd-wallpaper-1920p-1080p-wallpaper-full-size-images.-Download.jpg); background-size:100% ;">
+
 <c:url var="actionUrl" value="saveUser" />
 
 <form:form  commandName="user" method="post" action="${actionUrl }" class="form-horizontal" >
