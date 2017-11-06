@@ -36,7 +36,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="http://localhost:8080/medical/">HOME</a></li>
-                    <li><a href="#"></a></li>
+                    <li><a href="http://localhost:8080/medical/registration">register</a></li>
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle"> <b class="caret"></b></a>
                         <ul class="dropdown-menu">

@@ -35,13 +35,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">shoes</a>
+                <a class="navbar-brand" href="#"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="http://localhost:8080/medical/">HOME</a></li>
-                    <li><a href="#">PROFILE</a></li>
+                    <li><a href="#"></a></li>
                     
                 </ul>
                
@@ -139,6 +139,12 @@
 </div>
 </body>
 <br><br>
+
+</br>
+</br>
+</br>
+</br>
+</br></br>
 <jsp:include page="Footer.jsp" /> 
 
 </html>	

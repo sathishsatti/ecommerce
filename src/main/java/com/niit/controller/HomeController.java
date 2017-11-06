@@ -69,8 +69,10 @@ public class HomeController {
 			.getAuthentication().getAuthorities();
 			String role="ROLE_USER";
 			for (GrantedAuthority authority : authorities) 
+				
 			{
-			  
+			 
+				session.setAttribute("user",user);
 			     if (authority.getAuthority().equals(role)) 
 			     {
 			    	 session.setAttribute("UserLoggedIn", "true");

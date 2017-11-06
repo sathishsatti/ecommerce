@@ -37,7 +37,7 @@
 		<div class="row">
 			<div class="col-md-4 col-sm-6 footer-navigation">
 			    <h3><a href="#"><span> </span></a></h3>
-			    <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Terms and Conditions</a><strong> 
+			    <p class="links"><a href="http://localhost:8080/medical/">Home</a><strong> · </strong><a href="#">Terms and Conditions</a><strong> 
 			    · </strong><a href="#">Privacy Policy</a><strong> · </strong><a href="#">About</a><strong> 
 			    · </strong><a href="#">FAQ</a><strong> · </strong><a href="#">ContactUs</a></p>
 			    <p class="company-name"></p>
@@ -58,7 +58,12 @@
 			    <h4>About the company</h4>
 			    <p> 
 			    </p>
-			    <div class="social-links social-icons"><a href="https://www.facebook.com/YourStyle-565160520541773/"><i class="fa fa-facebook"></i></a><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a><a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a><a href="https://github.com/"><i class="fa fa-github"></i></a></div>
+			    <div class="social-links social-icons">
+			    <a href="https://www.facebook.com/YourStyle-565160520541773/">  <i class="fa fa-facebook">
+			    </i></a><a href="https://www.twitter.com/">  <i class="fa fa-twitter"></i>
+			    </a><a href="https://www.linkedin.com/">  <i class="fa fa-linkedin"></i></a>
+			    <a href="https://www.github.com/"><i class="fa fa-github"></i></a>
+			    </div>
 			</div>			
 		</div>
 		</div></div>

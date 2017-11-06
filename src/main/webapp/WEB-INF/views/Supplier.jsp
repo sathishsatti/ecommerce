@@ -11,15 +11,15 @@
 </head>
 <jsp:include page="header.jsp" />
 
-<body  style = "background : url(https://wallpaperscraft.com/image/background_wall_brick_side_76611_1920x1080.jpg); background-size:100%;">
+<body  style = "background : url(http://www.intrawallpaper.com/static/images/4237563-background-hd.jpg); background-size:100%;">
 	  
 	
 			<!-- <form action="AddSupplier" method="post">-->
 
 			<form:form action="AddSupplier" modelAttribute="supplier">
-			<table align="center" cellspacing="2">
+				<table align="center"class="table table-striped table-bordered" cellspacing="2" style="width:50%">
 			<tr>
-				<td colspan="2">Supplier Module</td>
+				<td align= "center" colspan="2">Supplier Module</td>
 			</tr>
 			
 			<%-- <tr>
@@ -36,27 +36,27 @@
 			</tr>
 		
 			<tr>
-				<td style="color:white">Supplier Name</td>
+				<td>Supplier Name</td>
 				<!-- <td><input type="text" name="supplierName"/></td> -->
 				<td><form:input path="supplierName"/></td>
 			</tr>
 		
 			<tr>
-				<td style="color:white">Supplier Address</td>
+				<td >Supplier Address</td>
 				<!-- <td><input type="text" name="supplierAddress"/></td> -->
 				<td><form:input path="supplierAddress"/></td>
 			</tr>
 	
 		<tr>
 			<td colspan="2">
-				<center><input type="submit" value="Insert"/>
-				<input type="submit" value="Update"/></center>
+				<center><input type="submit" value="Insert" class="btn btn-success"/>
+				</center>
 			</td>
 		</tr>
 	</table>
 	</form:form>
 
-<table cellspacing="2" align="center">
+<table class="table table-striped table-bordered" style="width:100%">
 	<tr bgcolor="gray">
 		<td>Supplier ID</td>
 		<td>Supplier Name</td>
@@ -71,8 +71,8 @@
 			<td>${supplier.supplierAddress}</td>
 			<td>
 			
-				<a href="<c:url value="deleteSupplier/${supplier.supplierId}"/>">DELETE</a>/
-				<a href="<c:url value="updateSupplier/${supplier.supplierId}"/>">UPDATE</a>
+				<a class="btn btn-primary" href="<c:url value="deleteSupplier/${supplier.supplierId}"/>">DELETE</a>/
+				<a class="btn btn-primary" href="<c:url value="updateSupplier/${supplier.supplierId}"/>">UPDATE</a>
 			</td>
 		</tr>
 	</c:forEach>

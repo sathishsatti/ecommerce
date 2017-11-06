@@ -25,7 +25,7 @@
 		</head>
 				
 
-	<body  style = "background : url(http://budgetvideo.com/images/gallery/savage_canvas_blueskies.jpg); background-size:100% 100%;">
+	<body>
 	  
 	  	<nav id ="navbar-red" class="navbar-inverse"role="navigation">
 			
@@ -81,12 +81,12 @@
     </div>
     <div class="item">
     <img class="img-rounded" class="img-responsive center-block"
-      src="C:\Users\SATHISH\Downloads\10788252_l.png" style="width:100%" "height="50%">
+      src="C:\Users\SATHISH\Downloads\10788252_l.png" style="width:100%" "height="20%">
     </div>
 
     <div class="item">
     <img class="img-rounded" class="img-responsive center-block"
-      src="C:\Users\SATHISH\Downloads\Online-Grocery-Shopping-In-Karachi_1.jpg" style="width:100%" "height="20%">
+      src="C:\Users\SATHISH\Downloads\Online-Grocery-Shopping-In-Karachi_1.jpg" style="width:100%" "height="50%">
     </div>
  
   </div>

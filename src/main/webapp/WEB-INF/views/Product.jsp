@@ -9,14 +9,15 @@
 </head>
 <jsp:include page="header.jsp" />
 
-<body  style = "background : url(http://cdn.coda-craven.org/wp-content/uploads/2016/10/beautiful-rail-tracks-coda-craven.jpg); background-size:100%;">
+<body  style = "background : url(https://www.bypeople.com/wp-content/uploads/2015/05/css-gradient-background.png); background-size:100%;">
 	  
 		
 		<form:form action="InsertProduct" modelAttribute="product" enctype="multipart/form-data">
-		<table align="center">
+	
 		
+		<table align="center"class="table table-striped table-bordered" cellspacing="2" style="width:50%">
 			<tr>
-				<td colspan="2">Product Detail</td>
+				<td  align="center" colspan="2">Product Detail</td>
 			</tr>	
 	
 				 <tr>
@@ -27,33 +28,33 @@
 		
 			<tr>
 				<td>Product Name</td>
-				<td><form:input path="productName"/></td>
+				<td><form:input path="productName" class="col-xs-6"/></td>
 			</tr>
 	
 			<tr>
 				<td>Product Desc</td>
-				<td><form:textarea path="productDesc"/></td>
+				<td><form:textarea path="productDesc" class="col-xs-6"/></td>
 			</tr>
 	
 	
 			<tr>
 				<td>Product Stock</td>
-				<td><form:input path="stock"/></td>
+				<td><form:input path="stock" class="col-xs-6"/></td>
 			</tr>
 	
 	
 			<tr>
 				<td>Product Price</td>
-				<td><form:input path="price"/></td>
+				<td><form:input path="price" class="col-xs-6"/></td>
 			</tr>
 	
 	
 			<tr>
 				<td>Category</td>
-				<td>
-					<form:select path="catId">
-					<form:option value="0" label="---Select---"/>
-					<form:options items="${categoryList}"/>
+				<td >
+					<form:select path="catId" class="col-xs-6">
+					<form:option value="0" label="---Select---" class="col-xs-6"/>
+					<form:options items="${categoryList}" class="col-xs-6"/>
 					</form:select>
 				</td>
 			</tr>
@@ -62,10 +63,10 @@
 
 			<tr>
 				<td>Supplier</td>
-				<td>
-					<form:select path="supplierId">
-					<form:option value="0" label="---Select---"/>
-					<form:options items="${supplierList}"/>
+				<td >
+					<form:select path="supplierId" class="col-xs-6">
+					<form:option value="0" label="---Select---" class="col-xs-6"/>
+					<form:options items="${supplierList}" class="col-xs-6"/>
 					</form:select>
 				</td>
 			</tr>
@@ -73,13 +74,13 @@
 	
 			<tr>
 				<td>Product Image</td>
-				<td><input type="file" name="file"/></td>
+				<td><input type="file" name="file" class="col-xs-6"/></td>
 			</tr> 
 	
 	
 			<tr>
 				<td colspan="2">
-					<center><input type="submit" value="Insert"/></center>
+					<center><input type="submit" value="Insert" class="btn btn-success"/></center>
 				</td>
 			</tr>
 	
@@ -87,7 +88,7 @@
 		</form:form>
 
 
-		<table cellspacing="2" align="center">
+<table class="table table-striped table-bordered" style="width:100%">
 				<tr bgcolor="gray">
 					<td>Product ID</td>
 					<td>Product Name</td>
@@ -101,7 +102,7 @@
 				</tr>
 	
 	
-		<c:forEach items="${productList}" var="product">
+		<c:forEach items="${productList}" var="product" varStatus="loopCounter">
 			<tr bgcolor="cyan">
 				<td>${product.productId}</td>
 				<td>${product.productName}</td>
@@ -113,8 +114,8 @@
 				<td>${product.image}</td>
 				<td>
 			
-						<a href="<c:url value="deleteProduct/${product.productId}"/>">DELETE</a>
-						<a href="<c:url value="updateProduct/${product.productId}"/>">UPDATE</a>
+						<a class="btn btn-primary" href="<c:url value="deleteProduct/${product.productId}"/>">DELETE</a>
+						<a class="btn btn-primary" href="<c:url value="updateProduct/${product.productId}"/>">UPDATE</a>
 				</td>
 			</tr>
 		</c:forEach></table>

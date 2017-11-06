@@ -17,9 +17,9 @@
     	margin: 20px;
     }
 </style>
-
-</head>
 <jsp:include page="header.jsp" />
+</head>
+
 <body style="background:url(http://www.planwallpaper.com/static/images/518097-background-hd.jpg);  background-size:100% 100%;">
 
 

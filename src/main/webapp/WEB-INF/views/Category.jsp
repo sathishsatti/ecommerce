@@ -17,10 +17,10 @@
 			<!-- <form action="AddCategory" method="post">-->
 	
 			<form:form action="AddCategory" modelAttribute="category">
-			<table align="center" cellspacing="2">
+		<table align="center"class="table table-striped table-bordered" cellspacing="2" style="width:50%">
 		
 			<tr>
-				<td colspan="2">Category Module</td>
+				<td  align="center" colspan="2">Category Module</td>
 			</tr>
 		     
 		     <tr>
@@ -45,17 +45,20 @@
 			<tr>
 				<td colspan="2">
 				
-					<center><input type="submit" value="Insert"/>
-					<input type="submit" value="update"/>
+					<center><input type="submit" value="Insert" class="btn btn-success"/>
+				
 					
 					</center>
 				</td>
 			</tr>
 		</table>
-		</form:form>
+		</form:form><br/>
 
 
-		<table cellspacing="2" align="center">
+		
+		
+		<table class="table table-striped table-bordered" style="width:100%">
+		
 			<tr bgcolor="gray">
 				<td>Category ID</td>
 				<td>Category Name</td>
@@ -70,8 +73,8 @@
 				<td>${category.catName}</td>
 				<td>${category.catDesc}</td>
 				<td>
-						<a href="<c:url value="deleteCategory/${category.catId}"/>">DELETE</a>
-						<a href="<c:url value="updateCategory/${category.catId}"/>">UPDATE</a>
+						<a class="btn btn-primary" href="<c:url value="deleteCategory/${category.catId}"/>">DELETE</a>
+						<a class="btn btn-primary" href="<c:url value="updateCategory/${category.catId}"/>">UPDATE</a>
 				</td>
 			</tr>
 		</c:forEach>
