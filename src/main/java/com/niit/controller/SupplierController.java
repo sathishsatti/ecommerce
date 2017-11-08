@@ -47,11 +47,11 @@ public class SupplierController
      
     
     @RequestMapping(value="updateSupplier/{supplierId}",method=RequestMethod.GET)
-    public String updateSupplier(@PathVariable("supplierid") int supplierId,Model m,RedirectAttributes attributes)
+    public String updateSupplier(@PathVariable("supplierId") int supplierId,Model m,RedirectAttributes attributes)
     {
       
         
-        attributes.addFlashAttribute("supplierid", this.supplierDao.getSupplier(supplierId));
+        attributes.addFlashAttribute("supplier", this.supplierDao.getSupplier(supplierId));
     	return "redirect:/supplier";
     }
      

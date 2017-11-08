@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Admin Page</title>
+<title>AdminPage</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -20,7 +20,7 @@
 <jsp:include page="header.jsp" />
 </head>
 
-<body style="background:url(http://www.planwallpaper.com/static/images/518097-background-hd.jpg);  background-size:100% 100%;">
+<body style="background:url();  background-size:100% 100%;">
 
 
 <!-- ------------------------------------------------------------------ -->
@@ -70,5 +70,5 @@
 </br>
 </br>
 </br> 
-<%-- 	<jsp:include page="footer.jsp" />  --%>
+<jsp:include page="Footer.jsp" />
 </html>   

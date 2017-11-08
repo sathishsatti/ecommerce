@@ -16,7 +16,7 @@
 	
 			<!-- <form action="AddSupplier" method="post">-->
 
-			<form:form action="AddSupplier" modelAttribute="supplier">
+	<form:form action="AddSupplier" modelAttribute="supplier">
 				<table align="center"class="table table-striped table-bordered" cellspacing="2" style="width:50%">
 			<tr>
 				<td align= "center" colspan="2">Supplier Module</td>
@@ -56,6 +56,7 @@
 	</table>
 	</form:form>
 
+
 <table class="table table-striped table-bordered" style="width:100%">
 	<tr bgcolor="gray">
 		<td>Supplier ID</td>
@@ -65,14 +66,14 @@
 	</tr>
 	
 	<c:forEach items="${supplierList}" var="supplier">
-		<tr bgcolor="cyan">
+		<tr bgcolor="#F7DC6F  ">
 			<td>${supplier.supplierId}</td>
 			<td>${supplier.supplierName}</td>
 			<td>${supplier.supplierAddress}</td>
 			<td>
 			
-				<a class="btn btn-primary" href="<c:url value="deleteSupplier/${supplier.supplierId}"/>">DELETE</a>/
-				<a class="btn btn-primary" href="<c:url value="updateSupplier/${supplier.supplierId}"/>">UPDATE</a>
+				<a class="btn btn-danger" href="<c:url value="deleteSupplier/${supplier.supplierId}"/>">DELETE</a>/
+				<a class="btn btn-success" href="<c:url value="updateSupplier/${supplier.supplierId}"/>">UPDATE</a>
 			</td>
 		</tr>
 	</c:forEach>

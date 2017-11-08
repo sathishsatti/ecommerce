@@ -74,13 +74,13 @@
 	
 			<tr>
 				<td>Product Image</td>
-				<td><input type="file" name="file" class="col-xs-6"/></td>
+				<td><input type="file" name="file" /></td>
 			</tr> 
 	
 	
 			<tr>
 				<td colspan="2">
-					<center><input type="submit" value="Insert" class="btn btn-success"/></center>
+					<center><input type="submit" value="Insert" class="btn btn-primary"/></center>
 				</td>
 			</tr>
 	
@@ -103,7 +103,7 @@
 	
 	
 		<c:forEach items="${productList}" var="product" varStatus="loopCounter">
-			<tr bgcolor="cyan">
+			<tr bgcolor="#5499C7">
 				<td>${product.productId}</td>
 				<td>${product.productName}</td>
 				<td>${product.productDesc}</td>
@@ -114,8 +114,8 @@
 				<td>${product.image}</td>
 				<td>
 			
-						<a class="btn btn-primary" href="<c:url value="deleteProduct/${product.productId}"/>">DELETE</a>
-						<a class="btn btn-primary" href="<c:url value="updateProduct/${product.productId}"/>">UPDATE</a>
+						<a class="btn btn-danger" href="<c:url value="deleteProduct/${product.productId}"/>">DELETE</a>
+						<a class="btn btn-success" href="<c:url value="updateProduct/${product.productId}"/>">UPDATE</a>
 				</td>
 			</tr>
 		</c:forEach></table>

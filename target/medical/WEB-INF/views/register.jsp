@@ -23,6 +23,7 @@
 </head>
 
 	<body  style = "background : url(http://awallpapersimages.com/wp-content/uploads/2016/07/Elephant-Full-HD-Wallpaper-hd-background-hd-screensavers-hd-wallpaper-1920p-1080p-wallpaper-full-size-images.-Download.jpg); background-size:100% ;">
+
 <div class="bs-example">
     <nav id="myNavbar" class="navbar navbar-inverse" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -59,6 +60,7 @@
 		<label for="First Name" class="col-xs-4 control-label">First Name</label>
 		<div class="col-xs-4">
 			<form:input name="username" path="username" placeholder="User First Name" class="form-control" />
+		<td><form:errors path="username" cssClass="error"/></td>
 		</div>
 	</div> 
 	
@@ -74,7 +76,8 @@
 	<div class="form-group">
 		<label for="Supplier Name" class="col-xs-4 control-label">Email</label>
 		<div class="col-xs-4">
-			<form:input name="username" path="email" placeholder="User Name" class="form-control" />
+			<form:input name="email" path="email" placeholder="User Name" class="form-control" />
+		<td><form:errors path="email" cssClass="error"/></td>  
 		</div>
 	</div>
 
@@ -82,6 +85,7 @@
 		<label for="code" class="col-xs-4 control-label">Password</label>
 		<div class="col-xs-4">
 			<form:input name="password"  path="password" placeholder="User Password" class="form-control" />
+			<td><form:errors path="password" cssClass="error"/></td>  
 		</div>
 	</div>
 
@@ -89,6 +93,7 @@
 		<label for="code" class="col-xs-4 control-label">Phone Number</label>
 		<div class="col-xs-4">
 			<form:input name="contact"  path="contact" placeholder="contact" class="form-control" />
+			<td><form:errors path="contact" cssClass="error"/></td>  
 		</div>
 	</div>
 
@@ -102,5 +107,20 @@
 	</div>
 	</div>
 </form:form>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<jsp:include page="Footer.jsp" />
 </body>
+
 </html>

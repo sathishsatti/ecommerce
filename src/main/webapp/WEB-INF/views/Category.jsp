@@ -16,7 +16,7 @@
 	
 			<!-- <form action="AddCategory" method="post">-->
 	
-			<form:form action="AddCategory" modelAttribute="category">
+		<form:form action="AddCategory" modelAttribute="category">
 		<table align="center"class="table table-striped table-bordered" cellspacing="2" style="width:50%">
 		
 			<tr>
@@ -54,7 +54,6 @@
 		</table>
 		</form:form><br/>
 
-
 		
 		
 		<table class="table table-striped table-bordered" style="width:100%">
@@ -68,40 +67,20 @@
 	
 	
 		<c:forEach items="${categoryList}" var="category">
-			<tr bgcolor="cyan">
+			<tr bgcolor="#85C1E9">
 				<td>${category.catId}</td>
 				<td>${category.catName}</td>
 				<td>${category.catDesc}</td>
 				<td>
-						<a class="btn btn-primary" href="<c:url value="deleteCategory/${category.catId}"/>">DELETE</a>
-						<a class="btn btn-primary" href="<c:url value="updateCategory/${category.catId}"/>">UPDATE</a>
+						<a class="btn btn-danger" href="<c:url value="deleteCategory/${category.catId}"/>">DELETE</a>
+						<a class="btn btn-success" href="<c:url value="editCategory/${category.catId}"/>">UPDATE</a>
 				</td>
 			</tr>
 		</c:forEach>
 
 		</table><br>
 
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>		
+
 		
 		
 		

@@ -27,11 +27,11 @@
 
 	<body>
 	  
-	  	<nav id ="navbar-red" class="navbar-inverse"role="navigation">
+	  	<nav id ="navbar-red" class="navbar-inverse" role="navigation" >
 			
 			<div class="container-fluid">
 				<ul="nav navbar-nav">
-					<button type="button"class="navbar-toggle collapsed datatoggle="collapse"data target="bs-example-nav">
+					<button type="button" class="navbar-toggle collapsed datatoggle="collapse" data target="bs-example-nav">
 						<span class="sr-only">toggle navigation</span>
 						<span class="icon_bar"></span>
 						<span class="icon_bar"></span>
@@ -40,7 +40,7 @@
 				</ul>
 			</div>
 		
-			<div class="collapse navbar-collapse"id=bs-example-nav>
+			<div class="collapse navbar-collapse" id=bs-example-nav>
 			
 			<ul class="nav navbar-nav navbar-right">
 			
@@ -77,11 +77,11 @@
   <div class="carousel-inner">
     <div class="item active">
       <img class="img-rounded" class="img-responsive center-block"
-      src="C:\Users\SATHISH\Downloads\123.png" style="width:100%" "height="50%">
+      src="C:\Users\SATHISH\Downloads\Askmegrocery-Pay-Day-Yay-Day-Offers.jpg" style="width:100%" "height="50%">
     </div>
     <div class="item">
     <img class="img-rounded" class="img-responsive center-block"
-      src="C:\Users\SATHISH\Downloads\10788252_l.png" style="width:100%" "height="20%">
+      src="C:\Users\SATHISH\Downloads\grocery.jpg" style="width:100%" "height="20%">
     </div>
 
     <div class="item">

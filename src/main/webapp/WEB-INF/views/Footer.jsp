@@ -19,7 +19,7 @@
 .footer {
    position: ;
    left: 0;
-   bottom: 0;
+   bottom:0;
    width: 100%;
    background-color: black;
    color: white;
@@ -44,13 +44,13 @@
 			</div>
 			<div class="col-md-4 col-sm-6 footer-contacts">
 			    <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
-			        <p><span class="new-line-span"></span></p>
+			        <p><span class="new-line-span"></span>KPHB,HYDERABAD,TELANGANA,INDIA</p>
 			    </div>
 			    <div><i class="fa fa-phone footer-contacts-icon"></i>
-			        <p class="footer-center-info email text-left"> </p>
+			        <p class="footer-center-info email text-left"> 1800-123-352</p>
 			    </div>
 			    <div><i class="fa fa-envelope footer-contacts-icon"></i>
-			        <p> <a href="#" target="_blank"></a></p>
+			        <p> <a href="#" target="_blank"></a> grocery@gmail.com</p>
 			    </div>
 			</div>
 			<div class="clearfix visible-sm-block"></div>

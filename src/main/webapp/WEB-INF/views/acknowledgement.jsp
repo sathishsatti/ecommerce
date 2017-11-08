@@ -50,7 +50,7 @@
 	
 	<table class="table table-hover table-condensed">
 	
-	<c:if test="${not empty error}">
+	`<c:if test="${not empty error}">
 	    	<h4> <font color="red">${error} </font></h4>
 	</c:if>
 	
